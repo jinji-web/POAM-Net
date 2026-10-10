@@ -1,0 +1,40 @@
+data:
+  train: data/fakeddit/train.jsonl
+  val: data/fakeddit/val.jsonl
+  test: data/fakeddit/test.jsonl
+  image_root: data/fakeddit/images
+  max_news_len: 256
+  max_comment_len: 64
+  max_comments: 20
+  image_size: 224
+  comment_order: earliest
+  allow_missing_images: false
+model:
+  text_checkpoint: FacebookAI/xlm-roberta-base
+  image_checkpoint: microsoft/swin-tiny-patch4-window7-224
+  feature_dim: 256
+  heads: 8
+  dropout: 0.20
+  comment_chunk_size: 16
+  variant: full
+  grad_checkpointing: false
+train:
+  seed: 42
+  seeds: [42, 43, 44, 45, 46]
+  batch_size: 16
+  num_workers: 2
+  epochs: 15
+  early_stopping: 3
+  encoder_lr: 0.00002
+  head_lr: 0.0001
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  gradient_clip: 1.0
+  grad_accumulation: 1
+  device: auto
+  use_amp: true
+  regularization_lambda: 0.0
+  class_weights: null
+  threshold: 0.5
+  freeze_text: false
+  freeze_vision: false

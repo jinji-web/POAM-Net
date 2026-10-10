@@ -1,0 +1,15 @@
+{
+  "id": "REPLACE_WITH_REAL_POST_ID",
+  "text": "REPLACE_WITH_ORIGINAL_POST_TEXT",
+  "image": "relative/path/to/original/image.jpg",
+  "label": 0,
+  "post_ts": "2025-01-01T12:00:00+00:00",
+  "comments": [
+    {
+      "text": "REPLACE_WITH_ACTUAL_COMMENT_TEXT",
+      "created_ts": "2025-01-01T12:30:00+00:00"
+    }
+  ],
+  "source_id": "OPTIONAL_REAL_SOURCE_ID",
+  "event_id": "OPTIONAL_VERIFIED_EVENT_GROUP_ID"
+}

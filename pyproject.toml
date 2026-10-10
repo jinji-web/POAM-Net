@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poam-net-paper-implementation"
+version = "0.1.0"
+description = "Independent manuscript-informed PyTorch implementation of POAM-Net"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+include = ["poam*"]
